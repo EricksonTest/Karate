@@ -1,0 +1,11 @@
+services:
+  petclinic:
+    image: springcommunity/spring-petclinic-rest:4.0.2
+    ports:
+      - "9966:9966"
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:9966/petclinic/actuator/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 24
+      start_period: 20s

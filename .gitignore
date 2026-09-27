@@ -1,0 +1,8 @@
+target/
+.idea/
+.vscode/
+*.iml
+.DS_Store
+
+# Local experiments are deliberately outside this test framework.
+welcome-to-docker/
